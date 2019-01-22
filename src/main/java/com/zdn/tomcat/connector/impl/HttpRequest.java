@@ -5,7 +5,7 @@ import com.zdn.tomcat.connector.ServletRequest;
 import java.io.IOException;
 import java.io.InputStream;
 
-public class HttpResquest implements ServletRequest {
+public class HttpRequest implements ServletRequest {
 
     /**
      * 请求方式
@@ -18,10 +18,10 @@ public class HttpResquest implements ServletRequest {
     private String url;
 
 
-    public HttpResquest() {
+    public HttpRequest() {
     }
 
-    public HttpResquest(InputStream inputStream) throws IOException {
+    public HttpRequest(InputStream inputStream) throws IOException {
         String httpInfo = "";
         byte[] buffer = new byte[1024];
         int len = 0;

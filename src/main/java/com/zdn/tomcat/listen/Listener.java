@@ -1,9 +1,8 @@
 package com.zdn.tomcat.listen;
 
 import com.zdn.tomcat.connector.impl.HttpResponse;
-import com.zdn.tomcat.connector.impl.HttpResquest;
+import com.zdn.tomcat.connector.impl.HttpRequest;
 import com.zdn.tomcat.connector.util.ConnectUtil;
-import com.zdn.tomcat.engine.api.AbGeneralServlet;
 import com.zdn.tomcat.engine.map.ServetMapConfig;
 import com.zdn.tomcat.engine.map.ServletMap;
 
@@ -38,10 +37,10 @@ public class Listener {
                 Socket socket = server.accept();
                 InputStream inputStream = socket.getInputStream();
                 OutputStream outputStream = socket.getOutputStream();
-                HttpResquest resquest = new HttpResquest(inputStream);
+                HttpRequest request = new HttpRequest(inputStream);
                 HttpResponse response = new HttpResponse(outputStream);
                 // 请求转发
-                ConnectUtil.dispatch(resquest, response);
+                ConnectUtil.dispatch(request, response);
                 socket.close();
             }
         } catch (Exception e) {
