@@ -16,17 +16,17 @@
    
 ---
 ### 测试
-1. 启动项目 监听8080
+1. 启动项目 监听8080   
 ![start_1](./src/test//resources/images/start_1.png)
 ![start_2](./src/test//resources/images/start_2.png)
-2. 客户端发起GET请求
+2. 客户端发起GET请求   
 ![get](./src/test//resources/images/get.png)
-3. 通过Connector连接分派请求到相应的servlet,并通过反射进行初始化
+3. 通过Connector连接分派请求到相应的servlet,并通过反射进行初始化   
 ![dispatch](./src/test//resources/images/dispatch.png)
-4. 根据请求方式找到具体的处理方法
+4. 根据请求方式找到具体的处理方法   
 ![service](./src/test//resources/images/service.png)
-5. 处理并返回
+5. 处理并返回   
 ![deal](./src/test//resources/images/deal.png)
-6. 客户端收到响应
+6. 客户端收到响应   
 ![response](./src/test//resources/images/response.png)
 
