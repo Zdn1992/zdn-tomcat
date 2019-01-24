@@ -27,7 +27,7 @@ public class Listener {
     }
 
     public void start() {
-        System.out.println("Tomcat run ...");
+        System.out.println("Tomcat run ...  listen to " + port);
         // 初始化Servlet配置
         initServletConfig();
         ServerSocket server = null;
