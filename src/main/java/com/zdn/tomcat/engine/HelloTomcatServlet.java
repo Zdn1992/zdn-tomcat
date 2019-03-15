@@ -6,7 +6,7 @@ import com.zdn.tomcat.engine.api.AbGeneralServlet;
 
 public class HelloTomcatServlet extends AbGeneralServlet {
     @Override
-    public void doGet(ServletRequest resquest, ServletResponse response) {
+    public void doGet(ServletRequest request, ServletResponse response) {
         try {
             response.write("GET Tomcat ... ^_^");
         } catch (Exception e) {
@@ -15,7 +15,7 @@ public class HelloTomcatServlet extends AbGeneralServlet {
     }
 
     @Override
-    public void doPost(ServletRequest resquest, ServletResponse response) {
+    public void doPost(ServletRequest request, ServletResponse response) {
         try {
             response.write("POST Tomcat ... ^_^");
         } catch (Exception e) {

@@ -7,12 +7,12 @@ public abstract class AbGeneralServlet implements Servlet{
     /**
      * Get请求
      */
-    public abstract void doGet(ServletRequest resquest, ServletResponse response);
+    public abstract void doGet(ServletRequest request, ServletResponse response);
 
     /**
      * Post请求
      */
-    public abstract void doPost(ServletRequest resquest, ServletResponse response);
+    public abstract void doPost(ServletRequest request, ServletResponse response);
 
     @Override
     public void service(ServletRequest request, ServletResponse response) {

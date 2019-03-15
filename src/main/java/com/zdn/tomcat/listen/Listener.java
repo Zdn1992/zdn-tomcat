@@ -3,7 +3,7 @@ package com.zdn.tomcat.listen;
 import com.zdn.tomcat.connector.impl.HttpResponse;
 import com.zdn.tomcat.connector.impl.HttpRequest;
 import com.zdn.tomcat.connector.util.ConnectUtil;
-import com.zdn.tomcat.engine.map.ServetMapConfig;
+import com.zdn.tomcat.engine.map.ServletMapConfig;
 import com.zdn.tomcat.engine.map.ServletMap;
 
 import java.io.IOException;
@@ -57,8 +57,8 @@ public class Listener {
     }
 
     private void initServletConfig() {
-        for (ServletMap servletMap : ServetMapConfig.servletMaps) {
-            ServetMapConfig.urlMap.put(servletMap.getUrl(), servletMap.getClazz());
+        for (ServletMap servletMap : ServletMapConfig.servletMaps) {
+            ServletMapConfig.urlMap.put(servletMap.getUrl(), servletMap.getClazz());
         }
     }
 
