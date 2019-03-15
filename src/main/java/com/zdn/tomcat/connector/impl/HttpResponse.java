@@ -20,7 +20,7 @@ public class HttpResponse implements ServletResponse {
         StringBuilder sb = new StringBuilder();
         sb.append("HTTP/1.1 200 OK\n")
                 .append("Content-Type: text/html\n")
-                .append("\r\n")
+                .append("\r\n") // 一定加入空行.http的规范.不然读取不到数据
                 .append("<html>")
                 .append("<head>")
                 .append("</head>")

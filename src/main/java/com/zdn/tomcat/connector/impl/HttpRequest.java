@@ -28,7 +28,7 @@ public class HttpRequest implements ServletRequest {
         if ((len = inputStream.read(buffer)) > 0){
             httpInfo = new String(buffer,0,len);
         }
-
+        // 根据http规范读取相应的请求参数信息
         String httpGeneral = httpInfo.split("\n")[0];
         // 获取请求方式和url
         method = httpGeneral.split("\\s")[0];
